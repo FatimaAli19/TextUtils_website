@@ -28,9 +28,7 @@ export default function About(props) {
             <h4>Text Summary</h4>
             <p>
               Need a quick summary of your text? Our tool generates a concise
-              summary, highlighting key points and providing an overview of the
-              content. It's perfect for getting a quick glimpse of your text's
-              main ideas. The summary also includes the estimated time to read
+              summary, highlighting the estimated time to read
               the text, along with the word and character count.
             </p>
             <h4>Text Preview</h4>
