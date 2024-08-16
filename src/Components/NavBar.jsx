@@ -1,50 +1,57 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import { Link } from "react-router-dom";
 
 export default function NavBar(props) {
   return (
     <div>
-      <Navbar expand="lg" className={`bg-${props.mode}`}>
+      <Navbar expand="lg" className={`bg-${props.mode} `}>
         <Container>
           <Navbar.Brand>
-            <a
-              href="/"
+            <Link
+              to="/"
               style={{ textDecoration: "none" }}
               className={`text-${props.mode === "light" ? "black" : "white"}`}
             >
               TextUtils
-            </a>
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link>
-                <a
-                  href="/home"
-                  className={`text-${props.mode === "light" ? "black" : "white"}`}
+              <Nav.Link as="span">
+                <Link
+                  to="/home"
+                  className={`text-${
+                    props.mode === "light" ? "black" : "white"
+                  }`}
                   style={{ textDecoration: "none" }}
                 >
                   Home
-                </a>
+                </Link>
               </Nav.Link>
-              <Nav.Link>
-                <a
-                  href="/about"
+              <Nav.Link as="span">
+                <Link
+                  to="/about"
                   style={{ textDecoration: "none" }}
-                  className={`text-${props.mode === "light" ? "black" : "white"}`}
+                  className={`text-${
+                    props.mode === "light" ? "black" : "white"
+                  }`}
                 >
                   About
-                </a>
+                </Link>
               </Nav.Link>
-              <Nav.Link>
-                <a
-                  href="/contact"
+              <Nav.Link as="span">
+                <Link
+                  to="/contact"
                   style={{ textDecoration: "none" }}
-                  className={`text-${props.mode === "light" ? "black" : "white"}`}
+                  className={`text-${
+                    props.mode === "light" ? "black" : "white"
+                  }`}
                 >
                   Contact Us
-                </a>
+                </Link>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
