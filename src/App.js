@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./Components/NavBar";
 import About from "./Components/About";
+import ContactUs from "./ContactUs";
 import { useState } from "react";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
     <>
       <NavBar mode={mode} toggleMode={toggleMode} />
       <About mode={mode} toggleMode={toggleMode} />
+      <ContactUs mode={mode} />
     </>
   );
 }
