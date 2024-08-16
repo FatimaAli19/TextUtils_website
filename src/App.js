@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./Components/NavBar";
 import About from "./Components/About";
 import ContactUs from "./ContactUs";
+import TextUtils from "./Components/TextUtils";
 import { useState } from "react";
 import Footer from "./Components/Footer";
 function App() {
@@ -21,8 +22,12 @@ function App() {
     <>
       <NavBar mode={mode} toggleMode={toggleMode} />
       <About mode={mode} toggleMode={toggleMode} />
+      <div className="container my-5 ">
+        <TextUtils heading="Enter the text to analyze" mode={mode} />
+      </div>
+
       <ContactUs mode={mode} />
-      <Footer mode={mode} toggleMode={toggleMode}/>
+      <Footer mode={mode} toggleMode={toggleMode} />
     </>
   );
 }
