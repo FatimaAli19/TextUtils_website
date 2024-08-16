@@ -3,7 +3,7 @@ import NavBar from "./Components/NavBar";
 import About from "./Components/About";
 import ContactUs from "./ContactUs";
 import { useState } from "react";
-
+import Footer from "./Components/Footer";
 function App() {
   const [mode, setMode] = useState("light");
 
@@ -22,6 +22,7 @@ function App() {
       <NavBar mode={mode} toggleMode={toggleMode} />
       <About mode={mode} toggleMode={toggleMode} />
       <ContactUs mode={mode} />
+      <Footer mode={mode} toggleMode={toggleMode}/>
     </>
   );
 }
